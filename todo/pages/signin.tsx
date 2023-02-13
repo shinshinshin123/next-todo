@@ -14,7 +14,7 @@ const signin = ({
                             <button
                                 onClick={() =>
                                     signIn(provider.id, {
-                                        callbackUrl: '/',
+                                        callbackUrl: '/todos',
                                     })
                                 }
                             >
