@@ -50,10 +50,20 @@ model User {
   image         String?
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  todos         Todo[]
   accounts      Account[]
   sessions      Session[]
 
   @@map(name: "users")
+}
+
+model Todo {
+  id        Int  @id @default(autoincrement())
+  title     String @db.VarChar(50)
+  content   String @db.VarChar(100)
+  users    User[]
+
+  @@map("todos")
 }
 
 model VerificationToken {
