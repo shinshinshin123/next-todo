@@ -8,9 +8,9 @@ export default async function createPost (
     const JSONdata = JSON.parse(req.body)
     const result = await prisma.post.create({
         data: {
-            id: JSONdata.id as number,
-            title: JSONdata.title as string,
-            content: JSONdata.content as string
+            id: JSONdata.id,
+            title: JSONdata.title,
+            content: JSONdata.content
         },
     })
     res.json(result)
