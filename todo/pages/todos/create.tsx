@@ -12,11 +12,13 @@ const Create: React.FC = () => {
         e.preventDefault()
         try {
             const body = { title, content }
-            await axios.post('/api/create', body).then(() => {
-                Router.push('/todos')
+            await fetch('/api/create',{
+                method: 'POST',
+                body: JSON.stringify(body)
             })
-        } catch(err) {
-            console.log(err)
+            // Router.push('/todos')
+        } catch(error) {
+            console.log(error)
         }
         console.log({title, content})
     }

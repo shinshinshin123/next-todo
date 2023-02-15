@@ -5,18 +5,13 @@ export default async function createTodo(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    try {
-    const { title, content } = req.body;
-
-    const result = await prisma.post.create({
-        data: {
-            title: title,
-            content: content,
-            published: true,
-        },
-    });
-    res.json(result);
-    } catch(err) {
-        res.json({error: err.message});
-    }
+   const JSONdata = JSON.parse(req.body)
+   const result = await prisma.post.create({
+       data: {
+           title: JSONdata.title,
+           content: JSONdata.content,
+           published: true,
+       },
+   })
+   res.json(result)
 }
