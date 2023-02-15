@@ -15,11 +15,10 @@ const Create: React.FC = () => {
             await axios.post('/api/create', body).then(() => {
                 Router.push('/todos')
             })
-            // await Router.push('/post')
         } catch(err) {
             console.log(err)
         }
-        // console.log({title, content})
+        console.log({title, content})
     }
 
     return (
