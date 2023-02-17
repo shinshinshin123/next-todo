@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Router from "next/router";
+import React from "react";
 
 export default function Create() {
     //後ほどオブジェクトにして一つにする
