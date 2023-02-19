@@ -6,7 +6,7 @@ export default async function Post (
       res: NextApiResponse
 ) {
    const data = JSON.parse(req.body)
-   const result = await prisma.post.create({
+   const result = await prisma.todo.create({
       data: {
          title: data.title,
          content: data.content
