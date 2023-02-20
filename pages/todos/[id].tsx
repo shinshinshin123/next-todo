@@ -17,7 +17,7 @@ export default function Todo({todo}:{todo:Todo}) {
        e.preventDefault()
        try {
            const body = { id }
-           await fetch('api/delete', {
+           await fetch('/api/delete', {
               method: 'POST',
               body: JSON.stringify(body)
         })
