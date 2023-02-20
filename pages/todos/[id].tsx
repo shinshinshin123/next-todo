@@ -18,11 +18,12 @@ export default function Todo({todo}:{todo:Todo}) {
 }
 
 export async function getServerSideProps({params}:{params:{id:number}}) {
-    const todo = await prisma.todo.findUnique({
+    const data = await prisma.todo.findUnique({
         where: {
             id: Number(params.id)
         }
     })
+    const todo = JSON.parse(JSON.stringify(data))
     return {
         props: {
             todo: todo

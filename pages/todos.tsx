@@ -12,6 +12,7 @@ export default function List({todos}:{todos:Todo[]}) {
     return (
         <>
           <h1>Todo詳細</h1>
+          <Link href="/todos/create">todoを作成</Link>
           <div>
             <ul>
               {
@@ -19,11 +20,11 @@ export default function List({todos}:{todos:Todo[]}) {
                   <li key={todo.id}>
                     <Link href={`/todos/${todo.id}`}>
                         <p>{todo.id}</p>
-                        <h3>タイトル</h3>
-                        <p>{todo.title}</p>
-                        <h3>内容</h3>
-                        <p>{todo.content}</p>
                     </Link>
+                    <h3>タイトル</h3>
+                    <p>{todo.title}</p>
+                    <h3>内容</h3>
+                    <p>{todo.content}</p>
                   </li>
                 ))
               }
