@@ -1,6 +1,7 @@
 import prisma from '@/lib/prisma';
 import { useState } from 'react';
 import Router from 'next/router';
+import Link from "next/link";
 
 //後ほど型定義のファイルを分ける。
 type Todo = {
@@ -27,20 +28,20 @@ export default function Edit({todo}:{todo:Todo}) {
         } catch(error) {
             console.log(error)
         }
-
+    }
         return (
             <>
-               <div>TODO編集ページ</div>
+               <h1>TODO編集ページ</h1>
                <form>
                   <p>タイトル</p>
                       <input id='title' type='text' onChange={(e) => setTitle(e.target.value)} value={title}/>
                   <p>内容</p>
                       <textarea id='content' onChange={(e) => setContent(e.target.value)} value={content}/>
                   <p><button onClick={updateTodo}>編集完了</button></p>
+                  <p><Link href='/todos'>戻る</Link></p>
                </form>
             </>
         )
-    }
 }
 
 export async function getServerSideProps({params}:{params:{id:number}}) {
