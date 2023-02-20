@@ -18,13 +18,13 @@ export default function List({todos}:{todos:Todo[]}) {
               {
                 todos.map((todo:Todo)=>(
                   <li key={todo.id}>
-                    <Link href={`/todos/${todo.id}`}>
-                        <p>{todo.id}</p>
-                    </Link>
+                    <p>{todo.id}</p>
                     <h3>タイトル</h3>
                     <p>{todo.title}</p>
                     <h3>内容</h3>
                     <p>{todo.content}</p>
+                    <p><Link href={`/todos/${todo.id}`}>詳細</Link></p>
+                    <p><Link href={`/todos/edit/${todo.id}`}>編集</Link></p>
                   </li>
                 ))
               }
