@@ -1,24 +1,29 @@
 import prisma from "@/lib/prisma";
+import Link from "next/link"
 
 //後ほど型定義のファイルを分ける。
-type todo = {
+type Todo = {
     id: number,
     title: string,
     content: string
 }
 
-export default function List({todos}:{todos:todo[]}) {
+export default function List({todos}:{todos:Todo[]}) {
     return (
         <>
           <h1>Todo詳細</h1>
           <div>
             <ul>
               {
-                todos.map((todo:todo)=>(
+                todos.map((todo:Todo)=>(
                   <li key={todo.id}>
-                    <p>{todo.id}</p>
-                    <p>{todo.title}</p>
-                    <p>{todo.content}</p>
+                    <Link href={`/todos/${todo.id}`}>
+                        <p>{todo.id}</p>
+                        <h3>タイトル</h3>
+                        <p>{todo.title}</p>
+                        <h3>内容</h3>
+                        <p>{todo.content}</p>
+                    </Link>
                   </li>
                 ))
               }
