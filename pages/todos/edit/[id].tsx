@@ -36,7 +36,7 @@ export default function Edit({todo}:{todo:Todo}) {
                       <input id='title' type='text' onChange={(e) => setTitle(e.target.value)} value={title}/>
                   <p>内容</p>
                       <textarea id='content' onChange={(e) => setContent(e.target.value)} value={content}/>
-                  <p><button onClick={updateTodo}>編集</button></p>
+                  <p><button onClick={updateTodo}>編集完了</button></p>
                </form>
             </>
         )

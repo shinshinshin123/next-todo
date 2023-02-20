@@ -5,14 +5,14 @@ export default async function editTodo(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    const JSONdata = JSON.parse(req.body)
+    const data = JSON.parse(req.body)
     const result = await prisma.todo.update({
         where: {
-            id: Number(JSONdata.id)
+            id: Number(data.id)
         },
         data: {
-            title: JSONdata.title,
-            content: JSONdata.content
+            title: data.title,
+            content: data.content
         },
     })
     res.json(result)

@@ -1,4 +1,5 @@
-import prisma from "@/lib/prisma"
+import prisma from "@/lib/prisma";
+import Link from "next/link";
 
 //後ほど型定義のファイルを分ける。
 type Todo = {
@@ -13,6 +14,7 @@ export default function Todo({todo}:{todo:Todo}) {
           <p>{todo.id}</p>
           <p>{todo.title}</p>
           <p>{todo.content}</p>
+          <Link href='/todos'>戻る</Link>
        </>
    )
 }

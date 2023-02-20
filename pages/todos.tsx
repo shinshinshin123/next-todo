@@ -11,7 +11,7 @@ type Todo = {
 export default function List({todos}:{todos:Todo[]}) {
     return (
         <>
-          <h1>Todo詳細</h1>
+          <h1>Todo一覧ページ</h1>
           <Link href="/todos/create">todoを作成</Link>
           <div>
             <ul>
