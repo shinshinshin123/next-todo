@@ -40,7 +40,7 @@ export async function getServerSideProps() {
     const todos = JSON.parse(JSON.stringify(data))
     return {
         props: {
-            todos:todos,
+            todos:todos
         }
     }
 }
