@@ -1,0 +1,19 @@
+import prisma from "@/lib/prisma";
+import { NextApiRequest , NextApiResponse } from 'next';
+
+export default async function editTodo(
+    req: NextApiRequest,
+    res: NextApiResponse
+) {
+    const data = JSON.parse(req.body)
+    const result = await prisma.todo.update({
+        where: {
+            id: Number(data.id)
+        },
+        data: {
+            title: data.title,
+            content: data.content
+        },
+    })
+    res.json(result)
+}
