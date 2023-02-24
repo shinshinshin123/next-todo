@@ -12,6 +12,7 @@ export default function List({todos}:{todos:Todo[]}) {
     return (
         <>
           <h1>Todo一覧ページ</h1>
+          <p><Link href='/'>戻る</Link></p>
           <Link href="/todos/create">todoを作成</Link>
           <div>
             <ul>
@@ -40,7 +41,7 @@ export async function getServerSideProps() {
     const todos = JSON.parse(JSON.stringify(data))
     return {
         props: {
-            todos:todos,
+            todos:todos
         }
     }
 }
