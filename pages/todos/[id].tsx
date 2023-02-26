@@ -30,7 +30,9 @@ export default function Todo({todo}:{todo:Todo}) {
    return (
        <>
           <p>{todo.id}</p>
+          <h3>タイトル</h3>
           <p>{todo.title}</p>
+          <h3>内容</h3>
           <p>{todo.content}</p>
           <Link href='/todos'>戻る</Link>
           <button onClick={deleteTodo}>削除</button>
