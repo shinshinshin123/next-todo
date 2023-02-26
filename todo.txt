@@ -3,9 +3,8 @@ Next.jsで「TODOリスト」を作成してください。
 終わったもの
 ・「簡易アプリ仕様設計-SampleTODOリスト」のようにページを分けて作ってみましょう。
 ・一覧、詳細、作成、編集画面を分ける
-・Next.jsのAPI Routesを使い、Restを使ったCRUD機能の実装
+・Next.jsのAPI Routes を使い、Restを使ったCRUD機能の実装
 ・DBの導入(postgres, sqlite,mysql etc....)
-
 
 終わったないもの
 ・ChakraUIもしくはMaterialUI導入
@@ -13,7 +12,6 @@ Next.jsで「TODOリスト」を作成してください。
   ・ログイン、ログアウト、サインアップ
 ・useContextもしくはRecoilを用いた状態管理
 ・Typescriptを導入
-
 
 余裕があれば
 ・TypeScriptのanyを使わずに実装
