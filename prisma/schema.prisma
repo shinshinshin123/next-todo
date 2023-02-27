@@ -72,5 +72,5 @@ model Todo {
   updatedAt DateTime @updatedAt
   users     User[]
   title String @db.VarChar(50)
-  content String? @db.VarChar(150)
+  content String? @db.VarChar(100)
 }
