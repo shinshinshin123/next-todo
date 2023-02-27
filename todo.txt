@@ -5,11 +5,14 @@ Next.jsで「TODOリスト」を作成してください。
 ・一覧、詳細、作成、編集画面を分ける
 ・Next.jsのAPI Routes を使い、Restを使ったCRUD機能の実装
 ・DBの導入(postgres, sqlite,mysql etc....)
+・NextAuthを使った認証機能
+  ・ログイン、ログアウト
 
 終わったないもの
 ・ChakraUIもしくはMaterialUI導入
+  - インストールだけ完了
 ・NextAuthを使った認証機能
-  ・ログイン、ログアウト、サインアップ
+  ・サインアップ
 ・useContextもしくはRecoilを用いた状態管理
 ・Typescriptを導入
 
