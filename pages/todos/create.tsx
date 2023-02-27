@@ -4,16 +4,6 @@ import React from "react";
 import Link from "next/link";
 
 export default function Create() {
-    //後ほどtitle,contentを一つにまとめる
-    // const [ todo, setTodo ] = useState({
-    //     title: "",
-    //     content: ""
-    // })
-    // const onChangeTitle = (e: any) =>
-    //     setTodo({...todo, title: e.target.value});
-    // const onChangeContent = (e: any) =>
-    //     setTodo({...todo, content: e.target.value});
-
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
 
