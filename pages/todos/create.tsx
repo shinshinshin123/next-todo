@@ -12,7 +12,7 @@ export default function Create() {
         content: '',
     })
 
-    const onChangeTodo =
+    const onChangeTodo =''
 
     const createTodo = async (e: React.SyntheticEvent) => {
         e.preventDefault()
@@ -33,7 +33,7 @@ export default function Create() {
             <div>
                 <h1>Todo作成ページ</h1>
                 <Link href='/todos'>戻る</Link>
-            </div>[]
+            </div>
             {/* 入力フォーム */}
             <form>
                 <p>タイトル</p>
